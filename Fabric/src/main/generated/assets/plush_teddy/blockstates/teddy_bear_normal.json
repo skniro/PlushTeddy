@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "plush_teddy:block/teddy_bear_normal",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "plush_teddy:block/teddy_bear_normal"
+    },
+    "facing=south": {
+      "model": "plush_teddy:block/teddy_bear_normal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "plush_teddy:block/teddy_bear_normal",
+      "y": 270
+    }
+  }
+}

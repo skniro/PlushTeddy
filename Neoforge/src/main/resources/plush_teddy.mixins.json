@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.skniro.plush_teddy.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "plush_teddy.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

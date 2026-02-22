@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "plush_teddy",
+  "version": "${version}",
+  "name": "Plush Teddy",
+  "description": "",
+  "authors": [
+    "skniro"
+  ],
+  "contact": {
+    "homepage": "https://skniro.org"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.skniro.plush_teddy.client.MapleClient"
+    ],
+    "main": [
+      "org.skniro.plush_teddy.PlushTeddy"
+    ],
+    "fabric-datagen": [
+      "org.skniro.plush_teddy.datagen.MapleDataGeneration"
+    ]
+  },
+  "mixins": [
+    "plush_teddy.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "minecraft": "1.21.X",
+    "fabric": "*"
+  }
+}
