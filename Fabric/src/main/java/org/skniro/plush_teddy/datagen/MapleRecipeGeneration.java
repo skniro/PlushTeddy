@@ -1,24 +1,23 @@
 package org.skniro.plush_teddy.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.recipe.RecipeExporter;
-import net.minecraft.data.recipe.RecipeGenerator;
-import net.minecraft.registry.RegistryWrapper;
-
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
 import java.util.concurrent.CompletableFuture;
 
 public class MapleRecipeGeneration extends FabricRecipeProvider {
-    public MapleRecipeGeneration(FabricDataOutput generator, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    public MapleRecipeGeneration(FabricPackOutput generator, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(generator, registryLookup);
     }
 
 
     @Override
-    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter exporter) {
-        return new RecipeGenerator(wrapperLookup, exporter) {
+    protected RecipeProvider createRecipeProvider(HolderLookup.Provider wrapperLookup, RecipeOutput exporter) {
+        return new RecipeProvider(wrapperLookup, exporter) {
             @Override
-            public void generate() {
+            public void buildRecipes() {
 
             }
         };

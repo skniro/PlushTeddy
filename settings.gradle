@@ -20,6 +20,6 @@ pluginManagement {
 }
 
 
-rootProject.name = 'Plush Teddy-1.21.11'
-//include("Fabric", "Neoforge")
-include("Fabric", "Forge", "Neoforge")
+rootProject.name = 'Plush Teddy-26.1'
+include("Fabric", "Neoforge")
+//include("Fabric", "Forge", "Neoforge")

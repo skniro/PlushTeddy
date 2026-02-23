@@ -1,9 +1,9 @@
 package org.skniro.plush_teddy;
 
 
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import org.skniro.plush_teddy.block.*;
 import org.skniro.plush_teddy.item.MapleItems;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 
 public class FurnitureContent {
@@ -17,9 +17,9 @@ public class FurnitureContent {
     }
 
     public static void CreativeTab() {
-        ItemGroupEvents.modifyEntriesEvent(PlushTeddy.Maple_Group_Furniture).register(content -> {
+        CreativeModeTabEvents.modifyOutputEvent(PlushTeddy.Maple_Group_Furniture).register(content -> {
 
-            content.add(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL);
+            content.accept(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL);
         });
 
     }

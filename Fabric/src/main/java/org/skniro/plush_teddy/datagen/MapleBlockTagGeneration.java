@@ -1,24 +1,22 @@
 package org.skniro.plush_teddy.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.registry.RegistryWrapper;
+
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
 
 import java.util.concurrent.CompletableFuture;
 
 
-public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider {
-    public MapleBlockTagGeneration(FabricDataOutput dataGenerator,CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
-        super(dataGenerator, completableFuture);
-    }
+public class MapleBlockTagGeneration extends FabricTagsProvider.BlockTagsProvider {
 
 
-    public static class ModBlockTags {
-
+    public MapleBlockTagGeneration(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
+        super(output, registryLookupFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup arg) {
+    protected void addTags(HolderLookup.Provider provider) {
 
     }
 }
