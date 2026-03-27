@@ -13,7 +13,7 @@ public class MapleClient {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
 
-        ChunkSectionLayer renderLayer2 = ChunkSectionLayer.TRIPWIRE;
+        ChunkSectionLayer renderLayer2 = ChunkSectionLayer.SOLID;
 
         ChunkSectionLayer renderLayer3 = ChunkSectionLayer.CUTOUT;
 
